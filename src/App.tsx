@@ -429,9 +429,102 @@ export default function App() {
 
   const left  = (slide + PHOTOS.length - 1) % PHOTOS.length;
   const right = (slide + 1) % PHOTOS.length;
+const [entered, setEntered] = useState(false);
+const audioRef = useRef<HTMLAudioElement | null>(null);
 
+const handleEnter = async () => {
+  console.log("ENTER BUTTON CLICKED");
+
+  try {
+    if (audioRef.current) {
+      console.log("AUDIO FOUND");
+      audioRef.current.volume = 1.0;
+      await audioRef.current.play();
+      console.log("MUSIC STARTED");
+    }
+
+    setEntered(true);
+  } catch (error) {
+    console.log("MUSIC ERROR:", error);
+    setEntered(true);
+  }
+};
   return (
     <div className="parchment-bg min-h-full relative" style={{ fontFamily: "'Lora', Georgia, serif", paddingRight: "2px" }}>
+      <audio
+  ref={audioRef}
+  src="/wedding-music.mp3"
+  loop
+  preload="auto"
+/>
+{!entered && (
+  <div className="fixed inset-0 z-[9999] parchment-bg min-h-screen flex flex-col items-center justify-center px-6 text-center">
+
+    <p
+      className="font-cinzel tracking-[0.22em]"
+      style={{
+        color: "#7a4a3a",
+        fontSize: "13px",
+        fontWeight: 700,
+        marginBottom: "20px",
+      }}
+    >
+      YOU ARE INVITED
+    </p>
+
+    <p
+      className="font-lora"
+      style={{
+        fontSize: "2.8rem",
+        color: "#2a1414",
+        lineHeight: 1.1,
+      }}
+    >
+      S. Anusha
+    </p>
+
+    <p
+      className="font-display italic"
+      style={{
+        fontSize: "1.7rem",
+        color: "#8b6040",
+        margin: "8px 0",
+      }}
+    >
+      &amp;
+    </p>
+
+    <p
+      className="font-lora"
+      style={{
+        fontSize: "2.8rem",
+        color: "#2a1414",
+        lineHeight: 1.1,
+      }}
+    >
+      G.Gokul Kumar
+    </p>
+
+    <button
+      onClick={handleEnter}
+      className="mt-12 px-8 py-4 rounded-full"
+      style={{
+        background: "#7a4a3a",
+        color: "#fff",
+        border: "none",
+        fontFamily: "'Cinzel', serif",
+        letterSpacing: "0.18em",
+        fontSize: "12px",
+        fontWeight: 700,
+        cursor: "pointer",
+        boxShadow: "0 6px 20px rgba(90,24,40,0.25)",
+      }}
+    >
+      TAP TO ENTER
+    </button>
+
+  </div>
+)}
 
       {/* ══ 1 ── HERO / SAVE THE DATE ════════════════════════════════════════ */}
       <section className="relative flex flex-col items-center pt-14 pb-16 px-5 overflow-hidden">
