@@ -1,0 +1,10 @@
+{
+  "description": "Create elegant, customizable Indian wedding invitation websites featuring ceremony details, photo galleries, and guestbook options for a memorable celebration.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

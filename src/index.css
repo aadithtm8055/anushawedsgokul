@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@font-face {
+  font-family: "Cinzel:Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://static.figma.com/font/Cinzel_wght__1") format("woff2");
+}
+@import 'tailwindcss';
+
+/* ── Reset & Root ─────────────────────────────────────────────────────────── */
+html, body, #root {
+  height: 100%;
+}
+
+*:focus-visible {
+  outline: 2px solid #c9a84c;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #ede5d4; }
+::-webkit-scrollbar-thumb { background: #7a2038; border-radius: 2px; }
+
+/* ── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  --parchment:       #f0e8d6;
+  --parchment-light: #f7f2e8;
+  --parchment-dark:  #e8ddc8;
+  --burgundy:        #5a1828;
+  --burgundy-mid:    #6b1f30;
+  --burgundy-light:  #7a2038;
+  --burgundy-deep:   #481020;
+  --gold:            #c9a84c;
+  --gold-light:      #dfc070;
+  --gold-muted:      #b89040;
+  --cream:           #faf5ec;
+  --cream-card:      #f5ede0;
+  --text-ink:        #2a1414;
+  --text-mid:        #5c3030;
+  --text-light:      #f5ede0;
+  --text-gold:       #c9a84c;
+  --rose:            #8b1a2c;
+  --rose-light:      #a02840;
+}
+
+/* ── Typography Utilities ─────────────────────────────────────────────────── */
+body {
+  font-family: 'Lora', Georgia, serif;
+  background-color: var(--parchment);
+  color: var(--text-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display  { font-family: 'Playfair Display', Georgia, serif; }
+.font-cinzel   { font-family: 'Cinzel', serif; }
+.font-lora     { font-family: 'Lora', Georgia, serif; }
+
+/* ── Scroll Reveal Animations ─────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.45s; }
+.reveal-delay-5 { transition-delay: 0.6s; }
+
+/* ── Parchment Texture ────────────────────────────────────────────────────── */
+.parchment-bg {
+  background-color: var(--parchment);
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(139,90,60,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(139,90,60,0.04) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* ── Burgundy Card ────────────────────────────────────────────────────────── */
+.card-burgundy {
+  background: linear-gradient(160deg, #5a1828 0%, #481020 55%, #3d0e1c 100%);
+  position: relative;
+  overflow: hidden;
+}
+.card-burgundy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(201,168,76,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ── Envelope ─────────────────────────────────────────────────────────────── */
+.envelope-body {
+  background: linear-gradient(175deg, #5a1828 0%, #481020 70%, #3d0e1c 100%);
+  position: relative;
+}
+.envelope-flap {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 52%);
+  background: linear-gradient(170deg, #6b1f30, #5a1828);
+}
+.envelope-flap-shadow {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 52%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), transparent);
+  pointer-events: none;
+}
+.envelope-bottom-left {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 50%; height: 100%;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  background: rgba(0,0,0,0.08);
+}
+.envelope-bottom-right {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 50%; height: 100%;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+  background: rgba(0,0,0,0.06);
+}
+
+/* ── Form Inputs ──────────────────────────────────────────────────────────── */
+.wedding-input {
+  width: 100%;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(176,140,100,0.45);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  color: var(--text-ink);
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.wedding-input:focus {
+  border-color: var(--burgundy);
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 0 3px rgba(90,24,40,0.08);
+}
+.wedding-input::placeholder { color: #b09878; }
+
+/* ── Gold Divider ─────────────────────────────────────────────────────────── */
+.gold-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.gold-rule::before,
+.gold-rule::after {
+  content: '';
+  flex: 1;
+  max-width: 64px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+}
+
+/* ── Calendar Cell ────────────────────────────────────────────────────────── */
+.cal-cell-highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #3d0e1c;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* ── Button Interactions ──────────────────────────────────────────────────── */
+.btn-gold {
+  transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.btn-gold:hover  { opacity: 0.88; transform: scale(1.03); }
+.btn-gold:active { transform: scale(0.97); }
+
+.btn-burgundy {
+  transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.btn-burgundy:hover  { opacity: 0.88; transform: scale(1.03); }
+.btn-burgundy:active { transform: scale(0.97); }
+
+/* ── Gallery ──────────────────────────────────────────────────────────────── */
+.gallery-img {
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity  0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.45s;
+}
+
+/* ── Carousel Dot ─────────────────────────────────────────────────────────── */
+.dot {
+  border-radius: 999px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s;
+  cursor: pointer;
+}
