@@ -964,92 +964,138 @@ const handleEnter = async () => {
         </div>
       </section>
 
-    {/* Timeline */}
-<div className="flex flex-col items-center w-full">
+    <section
+  className="py-14"
+  style={{ paddingLeft: 30, paddingRight: 30 }}
+>
+  <Reveal className="w-full">
 
-  {/* Event 1 */}
-  <div className="flex items-center justify-center gap-6">
+    {/* THIS IS THE BURGUNDY BOX */}
     <div
-      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+      className="card-burgundy rounded-2xl relative overflow-hidden w-full"
       style={{
-        background: "rgba(201,168,76,0.14)",
-        border: "1.5px solid rgba(201,168,76,0.5)"
+        boxShadow:
+          "0 20px 64px rgba(90,24,40,0.35), 0 4px 16px rgba(0,0,0,0.18)"
       }}
     >
-      <svg
-        viewBox="0 0 24 24"
-        className="w-7 h-7"
-        fill="none"
-        stroke="#c9a84c"
-        strokeWidth="1.6"
-      >
-        <circle cx="12" cy="12" r="7"/>
-        <circle cx="12" cy="12" r="3.5"/>
-      </svg>
+
+      {/* Everything inside this div appears INSIDE the burgundy box */}
+
+      <div className="relative z-20 px-10 py-12">
+
+        {/* Your RECEPTION DAY SCHEDULE heading here */}
+
+
+        {/* Your Timeline goes here */}
+        <div className="flex flex-col items-center w-full">
+
+          {/* Event 1 */}
+          <div className="flex items-center justify-center gap-6">
+            <div
+              className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+              style={{
+                background: "rgba(201,168,76,0.14)",
+                border: "1.5px solid rgba(201,168,76,0.5)"
+              }}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="w-7 h-7"
+                fill="none"
+                stroke="#c9a84c"
+                strokeWidth="1.6"
+              >
+                <circle cx="12" cy="12" r="7" />
+                <circle cx="12" cy="12" r="3.5" />
+              </svg>
+            </div>
+
+            <div>
+              <p
+                className="font-cinzel tracking-wider"
+                style={{
+                  color: "#c9a84c",
+                  fontSize: "13px"
+                }}
+              >
+                9:15 AM
+              </p>
+
+              <p
+                className="font-lora"
+                style={{
+                  color: "#f5ede0",
+                  fontSize: "1.6rem"
+                }}
+              >
+                Engagement
+              </p>
+            </div>
+          </div>
+
+
+          {/* Connector */}
+          <div className="my-3">
+            <div
+              className="w-px h-10"
+              style={{
+                background: "rgba(201,168,76,0.22)"
+              }}
+            />
+          </div>
+
+
+          {/* Event 2 */}
+          <div className="flex items-center justify-center gap-6">
+            <div
+              className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+              style={{
+                background: "rgba(201,168,76,0.14)",
+                border: "1.5px solid rgba(201,168,76,0.5)"
+              }}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="w-7 h-7"
+                fill="#c9a84c"
+                opacity={0.88}
+              >
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+              </svg>
+            </div>
+
+            <div>
+              <p
+                className="font-cinzel tracking-wider"
+                style={{
+                  color: "#c9a84c",
+                  fontSize: "13px"
+                }}
+              >
+                6:00 PM
+              </p>
+
+              <p
+                className="font-lora"
+                style={{
+                  color: "#f5ede0",
+                  fontSize: "1.6rem"
+                }}
+              >
+                Reception
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+    {/* END OF BURGUNDY BOX */}
 
-    <div>
-      <p
-        className="font-cinzel tracking-wider"
-        style={{ color: "#c9a84c", fontSize: "13px" }}
-      >
-        9:15 AM
-      </p>
-
-      <p
-        className="font-lora"
-        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
-      >
-        Engagement
-      </p>
-    </div>
-  </div>
-
-  {/* Connector */}
-  <div className="my-3">
-    <div
-      className="w-px h-10"
-      style={{ background: "rgba(201,168,76,0.22)" }}
-    />
-  </div>
-
-  {/* Event 2 */}
-  <div className="flex items-center justify-center gap-6">
-    <div
-      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-      style={{
-        background: "rgba(201,168,76,0.14)",
-        border: "1.5px solid rgba(201,168,76,0.5)"
-      }}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        className="w-7 h-7"
-        fill="#c9a84c"
-        opacity={0.88}
-      >
-        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-      </svg>
-    </div>
-
-    <div>
-      <p
-        className="font-cinzel tracking-wider"
-        style={{ color: "#c9a84c", fontSize: "13px" }}
-      >
-        6:00 PM
-      </p>
-
-      <p
-        className="font-lora"
-        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
-      >
-        Reception
-      </p>
-    </div>
-  </div>
-
-</div>
+  </Reveal>
+</section>
 
       {/* ══ Footer ═══════════════════════════════════════════════════════════ */}
       <footer className="text-center py-12" style={{ background: "#3d0e1c" }}>
