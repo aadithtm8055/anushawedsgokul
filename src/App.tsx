@@ -719,7 +719,7 @@ const handleEnter = async () => {
         <div className="absolute inset-0 overflow-hidden"><Temple /></div>
 
         <div className="relative z-10 w-full">
-          <Reveal className="text-center mb-12">
+          <Reveal className="text-center mb-16">
             <SectionLabel>togetherness</SectionLabel>
           </Reveal>
 
