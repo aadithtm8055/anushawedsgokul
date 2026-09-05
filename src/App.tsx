@@ -995,87 +995,126 @@ const handleEnter = async () => {
               </div>
 
               {/* Timeline */}
-<div className="flex flex-col items-center w-full">
+<div className="flex justify-center w-full">
 
-  {/* Event 1 */}
-  <div className="flex items-center gap-6">
-    <div
-      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-      style={{
-        background: "rgba(201,168,76,0.14)",
-        border: "1.5px solid rgba(201,168,76,0.5)"
-      }}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        className="w-7 h-7"
-        fill="none"
-        stroke="#c9a84c"
-        strokeWidth="1.6"
+  <div className="flex flex-col">
+
+    {/* Event 1 */}
+    <div className="grid grid-cols-[64px_180px] items-center gap-6">
+
+      {/* Icon */}
+      <div
+        className="w-16 h-16 rounded-full flex items-center justify-center"
+        style={{
+          background: "rgba(201,168,76,0.14)",
+          border: "1.5px solid rgba(201,168,76,0.5)"
+        }}
       >
-        <circle cx="12" cy="12" r="7"/>
-        <circle cx="12" cy="12" r="3.5"/>
-      </svg>
+        <svg
+          viewBox="0 0 24 24"
+          className="w-7 h-7"
+          fill="none"
+          stroke="#c9a84c"
+          strokeWidth="1.6"
+        >
+          <circle cx="12" cy="12" r="7" />
+          <circle cx="12" cy="12" r="3.5" />
+        </svg>
+      </div>
+
+      {/* Text */}
+      <div>
+        <p
+          className="font-cinzel tracking-wider"
+          style={{
+            color: "#c9a84c",
+            fontSize: "13px"
+          }}
+        >
+          9:15 AM
+        </p>
+
+        <p
+          className="font-lora"
+          style={{
+            color: "#f5ede0",
+            fontSize: "1.6rem"
+          }}
+        >
+          Engagement
+        </p>
+      </div>
+
     </div>
 
-    <div>
-      <p
-        className="font-cinzel tracking-wider"
-        style={{ color: "#c9a84c", fontSize: "13px" }}
-      >
-        9:15 AM
-      </p>
-      <p
-        className="font-lora"
-        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
-      >
-        Engagement
-      </p>
-    </div>
-  </div>
 
-  {/* Connector */}
-  <div className="h-10 w-px my-3"
-    style={{ background: "rgba(201,168,76,0.22)" }}
-  />
+    {/* Connector */}
+    <div className="grid grid-cols-[64px_180px] gap-6">
 
-  {/* Event 2 */}
-  <div className="flex items-center gap-6">
-    <div
-      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-      style={{
-        background: "rgba(201,168,76,0.14)",
-        border: "1.5px solid rgba(201,168,76,0.5)"
-      }}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        className="w-7 h-7"
-        fill="#c9a84c"
-        opacity={0.88}
-      >
-        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-      </svg>
+      <div className="flex justify-center">
+        <div
+          className="w-px h-10"
+          style={{
+            background: "rgba(201,168,76,0.22)"
+          }}
+        />
+      </div>
+
+      <div />
+
     </div>
 
-    <div>
-      <p
-        className="font-cinzel tracking-wider"
-        style={{ color: "#c9a84c", fontSize: "13px" }}
+
+    {/* Event 2 */}
+    <div className="grid grid-cols-[64px_180px] items-center gap-6">
+
+      {/* Icon */}
+      <div
+        className="w-16 h-16 rounded-full flex items-center justify-center"
+        style={{
+          background: "rgba(201,168,76,0.14)",
+          border: "1.5px solid rgba(201,168,76,0.5)"
+        }}
       >
-        6:00 PM
-      </p>
-      <p
-        className="font-lora"
-        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
-      >
-        Reception
-      </p>
+        <svg
+          viewBox="0 0 24 24"
+          className="w-7 h-7"
+          fill="#c9a84c"
+          opacity={0.88}
+        >
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+        </svg>
+      </div>
+
+      {/* Text */}
+      <div>
+        <p
+          className="font-cinzel tracking-wider"
+          style={{
+            color: "#c9a84c",
+            fontSize: "13px"
+          }}
+        >
+          6:00 PM
+        </p>
+
+        <p
+          className="font-lora"
+          style={{
+            color: "#f5ede0",
+            fontSize: "1.6rem"
+          }}
+        >
+          Reception
+        </p>
+      </div>
+
     </div>
+
   </div>
 
 </div>
-            </div>
+</div>
           </div>
         </Reveal>
       </section>
