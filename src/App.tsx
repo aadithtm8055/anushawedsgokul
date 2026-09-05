@@ -720,7 +720,7 @@ const handleEnter = async () => {
 
         <div className="relative z-10 w-full">
           <Reveal className="text-center mb-16">
-            <SectionLabel>togetherness</SectionLabel>
+            <SectionLabel> <span style={{ fontSize: "18px" }}>togetherness</span></SectionLabel>
           </Reveal>
 
           {/* Carousel */}
@@ -964,150 +964,92 @@ const handleEnter = async () => {
         </div>
       </section>
 
-      {/* ══ 6 ── RECEPTION DAY SCHEDULE ═════════════════════════════════════ */}
-      <section className="py-14" style={{ paddingLeft: 30, paddingRight: 30 }}>
-        <Reveal className="w-full">
-          <div className="card-burgundy rounded-2xl relative overflow-hidden w-full"
-            style={{ boxShadow: "0 20px 64px rgba(90,24,40,0.35), 0 4px 16px rgba(0,0,0,0.18)" }}>
+      {/* Timeline */}
+<div className="flex flex-col items-center w-full">
 
-            {/* Floral right */}
-            <div className="absolute right-0 top-0 bottom-0 w-32 pointer-events-none z-10 hidden sm:block">
-              <FloralRight h={360} className="absolute right-0 top-0 h-full w-32"/>
-            </div>
-            <div className="absolute right-0 top-0 w-24 h-32 pointer-events-none z-10 sm:hidden">
-              <FloralCorner className="w-24 h-32 opacity-75"/>
-            </div>
+  {/* Event 1 */}
+  <div className="flex items-center gap-6">
+    <div
+      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+      style={{
+        background: "rgba(201,168,76,0.14)",
+        border: "1.5px solid rgba(201,168,76,0.5)"
+      }}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="w-7 h-7"
+        fill="none"
+        stroke="#c9a84c"
+        strokeWidth="1.6"
+      >
+        <circle cx="12" cy="12" r="7"/>
+        <circle cx="12" cy="12" r="3.5"/>
+      </svg>
+    </div>
 
-            <div className="relative z-20 px-10 py-12">
-              {/* Heading */}
-              <div className="text-center mb-10">
-                <div className="flex items-center justify-center gap-3 mb-1">
-                  <div className="h-px w-10" style={{ background: "#c9a84c", opacity: 0.45 }}/>
-                  <p className="font-cinzel tracking-[0.32em]" style={{ color: "#c9a84c", fontSize: "15px", fontWeight: 900 }}>RECEPTION DAY SCHEDULE</p>
-                  <div className="h-px w-10" style={{ background: "#c9a84c", opacity: 0.45 }}/>
-                </div>
-                <div className="mt-3"><GoldDivider color="#c9a84c"/></div>
-              </div>
+    <div>
+      <p
+        className="font-cinzel tracking-wider"
+        style={{ color: "#c9a84c", fontSize: "13px" }}
+      >
+        9:15 AM
+      </p>
 
-              {/* Timeline */}
-              {/* Timeline */}
-<div className="flex flex-col items-center justify-center w-full">
-                {/* Event 1 */}
-                <div className="flex items-center justify-center gap-6 w-full">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ background: "rgba(201,168,76,0.14)", border: "1.5px solid rgba(201,168,76,0.5)" }}>
-                    <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none" stroke="#c9a84c" strokeWidth="1.6">
-                      <circle cx="12" cy="12" r="7"/>
-                      <circle cx="12" cy="12" r="3.5"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-cinzel tracking-wider" style={{ color: "#c9a84c", fontSize: "13px" }}>9:15 AM</p>
-                    <p className="font-lora" style={{ color: "#f5ede0", fontSize: "1.6rem" }}>Engagement</p>
-                  </div>
-                </div>
+      <p
+        className="font-lora"
+        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
+      >
+        Engagement
+      </p>
+    </div>
+  </div>
 
-                {/* Connector */}
-                <div style={{ marginLeft: 0, marginTop: 6, marginBottom: 6 }}>
-                  <div className="w-px h-10" style={{ background: "rgba(201,168,76,0.22)" }}/>
-                </div>
+  {/* Connector */}
+  <div className="my-2">
+    <div
+      className="w-px h-10"
+      style={{ background: "rgba(201,168,76,0.22)" }}
+    />
+  </div>
 
-                {/* Event 2 */}
-                <div className="flex items-center justify-center gap-6 w-full">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ background: "rgba(201,168,76,0.14)", border: "1.5px solid rgba(201,168,76,0.5)" }}>
-                    <svg viewBox="0 0 24 24" className="w-7 h-7" fill="#c9a84c" opacity={0.88}>
-                      <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-cinzel tracking-wider" style={{ color: "#c9a84c", fontSize: "13px" }}>6:00 PM</p>
-                    <p className="font-lora" style={{ color: "#f5ede0", fontSize: "1.6rem" }}>Reception</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+  {/* Event 2 */}
+  <div className="flex items-center gap-6">
+    <div
+      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+      style={{
+        background: "rgba(201,168,76,0.14)",
+        border: "1.5px solid rgba(201,168,76,0.5)"
+      }}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="w-7 h-7"
+        fill="#c9a84c"
+        opacity={0.88}
+      >
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+      </svg>
+    </div>
 
+    <div>
+      <p
+        className="font-cinzel tracking-wider"
+        style={{ color: "#c9a84c", fontSize: "13px" }}
+      >
+        6:00 PM
+      </p>
 
-      {/* ══ 7 ── GUESTBOOK ═══════════════════════════════════════════════════ */}
-      <section className="relative py-14 pb-20" style={{ paddingLeft: 30, paddingRight: 30 }}>
-        <div className="absolute inset-0 overflow-hidden"><Temple /></div>
+      <p
+        className="font-lora"
+        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
+      >
+        Reception
+      </p>
+    </div>
+  </div>
 
-        <div className="relative z-10 w-full">
-          <Reveal>
-            <div className="relative rounded-2xl overflow-hidden"
-              style={{
-                background: "linear-gradient(155deg, #faf5ec 0%, #f2e8d4 100%)",
-                boxShadow: "0 24px 80px rgba(90,24,40,0.22), 0 4px 18px rgba(90,24,40,0.12)",
-                border: "1px solid rgba(201,168,76,0.32)",
-              }}>
-
-              {/* Bottom-left floral decoration */}
-              <div className="absolute bottom-0 left-0 w-40 h-52 pointer-events-none z-0">
-                <FloralCorner className="w-40 h-52 opacity-30" flip/>
-              </div>
-
-              <div className="relative z-10 px-7 py-10">
-                {/* Ornament header */}
-                <div className="text-center mb-8">
-                  <svg viewBox="0 0 140 28" className="w-28 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="14" x2="54" y2="14" stroke="#c9a84c" strokeWidth="0.9" opacity="0.5"/>
-                    <circle cx="70" cy="14" r="5.5" fill="none" stroke="#c9a84c" strokeWidth="1.2" opacity="0.75"/>
-                    <circle cx="70" cy="14" r="2.2" fill="#c9a84c" opacity="0.65"/>
-                    <line x1="86" y1="14" x2="140" y2="14" stroke="#c9a84c" strokeWidth="0.9" opacity="0.5"/>
-                    <circle cx="24" cy="14" r="2" fill="none" stroke="#c9a84c" strokeWidth="1" opacity="0.45"/>
-                    <circle cx="116" cy="14" r="2" fill="none" stroke="#c9a84c" strokeWidth="1" opacity="0.45"/>
-                  </svg>
-                  <div style={{ fontWeight: 900 }}><SectionLabel>GUESTBOOK</SectionLabel></div>
-                  <div className="mt-3 mb-1"><GoldDivider color="#8b6040"/></div>
-                </div>
-
-                <form onSubmit={submitWish} className="space-y-4">
-                  <textarea
-                    placeholder="Enter your wishes"
-                    value={msg}
-                    onChange={e => setMsg(e.target.value)}
-                    rows={5}
-                    className="wedding-input resize-none"
-                  />
-                  <div className="flex justify-center pt-1">
-                    <button type="submit"
-                      className="font-cinzel tracking-[0.28em] text-xs px-11 py-3.5 rounded-full btn-burgundy"
-                      style={{ background: "#5a1828", color: "#f5ede0", boxShadow: "0 5px 20px rgba(90,24,40,0.38)", fontSize: "10.5px" }}>
-                      SEND WISHES
-                    </button>
-                  </div>
-                </form>
-
-                {/* Blessing text */}
-                <p className="font-lora italic text-center mt-8"
-                  style={{ color: "#8b6040", fontSize: "13px", fontWeight: 700 }}>
-                  We wish you joy, love &amp; blessings
-                </p>
-
-                {/* Submitted wishes */}
-                {wishes.length > 0 && (
-                  <div className="mt-8 space-y-4">
-                    <div className="h-px" style={{ background: "rgba(90,24,40,0.14)" }}/>
-                    {wishes.map((w, i) => (
-                      <div key={i} className="rounded-xl p-4"
-                        style={{ background: "rgba(90,24,40,0.05)", border: "1px solid rgba(90,24,40,0.1)" }}>
-                        <p className="font-cinzel tracking-wider mb-1" style={{ color: "#5a1828", fontSize: "9.5px" }}>
-                          {w.name}
-                        </p>
-                        <p className="font-lora italic text-sm" style={{ color: "#5c3030" }}>"{w.message}"</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+</div>
 
       {/* ══ Footer ═══════════════════════════════════════════════════════════ */}
       <footer className="text-center py-12" style={{ background: "#3d0e1c" }}>
