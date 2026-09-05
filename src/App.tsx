@@ -995,7 +995,6 @@ const handleEnter = async () => {
       >
         9:15 AM
       </p>
-
       <p
         className="font-lora"
         style={{ color: "#f5ede0", fontSize: "1.6rem" }}
@@ -1006,12 +1005,9 @@ const handleEnter = async () => {
   </div>
 
   {/* Connector */}
-  <div className="my-2">
-    <div
-      className="w-px h-10"
-      style={{ background: "rgba(201,168,76,0.22)" }}
-    />
-  </div>
+  <div className="h-10 w-px my-3"
+    style={{ background: "rgba(201,168,76,0.22)" }}
+  />
 
   {/* Event 2 */}
   <div className="flex items-center gap-6">
@@ -1039,7 +1035,6 @@ const handleEnter = async () => {
       >
         6:00 PM
       </p>
-
       <p
         className="font-lora"
         style={{ color: "#f5ede0", fontSize: "1.6rem" }}
