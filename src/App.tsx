@@ -990,41 +990,91 @@ const handleEnter = async () => {
               </div>
 
               {/* Timeline */}
-              <div className="flex flex-col items-center w-full">
-                {/* Event 1 */}
-                <div className="flex items-center gap-6 w-full max-w-sm">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ background: "rgba(201,168,76,0.14)", border: "1.5px solid rgba(201,168,76,0.5)" }}>
-                    <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none" stroke="#c9a84c" strokeWidth="1.6">
-                      <circle cx="12" cy="12" r="7"/>
-                      <circle cx="12" cy="12" r="3.5"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-cinzel tracking-wider" style={{ color: "#c9a84c", fontSize: "13px" }}>9:15 AM</p>
-                    <p className="font-lora" style={{ color: "#f5ede0", fontSize: "1.6rem" }}>Engagement</p>
-                  </div>
-                </div>
+<div className="flex flex-col items-center w-full">
 
-                {/* Connector */}
-                <div style={{ marginLeft: 0, marginTop: 6, marginBottom: 6 }}>
-                  <div className="w-px h-10" style={{ background: "rgba(201,168,76,0.22)" }}/>
-                </div>
+  {/* Event 1 */}
+  <div className="flex items-center gap-6">
+    <div
+      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+      style={{
+        background: "rgba(201,168,76,0.14)",
+        border: "1.5px solid rgba(201,168,76,0.5)"
+      }}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="w-7 h-7"
+        fill="none"
+        stroke="#c9a84c"
+        strokeWidth="1.6"
+      >
+        <circle cx="12" cy="12" r="7"/>
+        <circle cx="12" cy="12" r="3.5"/>
+      </svg>
+    </div>
 
-                {/* Event 2 */}
-                <div className="flex items-center gap-6 w-full max-w-sm">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ background: "rgba(201,168,76,0.14)", border: "1.5px solid rgba(201,168,76,0.5)" }}>
-                    <svg viewBox="0 0 24 24" className="w-7 h-7" fill="#c9a84c" opacity={0.88}>
-                      <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-cinzel tracking-wider" style={{ color: "#c9a84c", fontSize: "13px" }}>6:00 PM</p>
-                    <p className="font-lora" style={{ color: "#f5ede0", fontSize: "1.6rem" }}>Reception</p>
-                  </div>
-                </div>
-              </div>
+    <div>
+      <p
+        className="font-cinzel tracking-wider"
+        style={{ color: "#c9a84c", fontSize: "13px" }}
+      >
+        9:15 AM
+      </p>
+
+      <p
+        className="font-lora"
+        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
+      >
+        Engagement
+      </p>
+    </div>
+  </div>
+
+  {/* Connector */}
+  <div className="my-2">
+    <div
+      className="w-px h-10"
+      style={{ background: "rgba(201,168,76,0.22)" }}
+    />
+  </div>
+
+  {/* Event 2 */}
+  <div className="flex items-center gap-6">
+    <div
+      className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
+      style={{
+        background: "rgba(201,168,76,0.14)",
+        border: "1.5px solid rgba(201,168,76,0.5)"
+      }}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="w-7 h-7"
+        fill="#c9a84c"
+        opacity={0.88}
+      >
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+      </svg>
+    </div>
+
+    <div>
+      <p
+        className="font-cinzel tracking-wider"
+        style={{ color: "#c9a84c", fontSize: "13px" }}
+      >
+        6:00 PM
+      </p>
+
+      <p
+        className="font-lora"
+        style={{ color: "#f5ede0", fontSize: "1.6rem" }}
+      >
+        Reception
+      </p>
+    </div>
+  </div>
+
+</div>
             </div>
           </div>
         </Reveal>
