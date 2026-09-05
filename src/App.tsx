@@ -620,7 +620,7 @@ const handleEnter = async () => {
       <section className="pb-14" style={{ paddingLeft: 30, paddingRight: 30 }}>
         <Reveal className="w-full">
           <div className="card-burgundy rounded-2xl relative overflow-hidden"
-            style={{ boxShadow: "0 20px 64px rgba(90,24,40,0.38), 0 4px 16px rgba(0,0,0,0.2)", left: 2 }}>
+  style={{ boxShadow: "0 20px 64px rgba(90,24,40,0.38), 0 4px 16px rgba(0,0,0,0.2)" }}>
 
             {/* Floral right */}
             <div className="absolute right-0 top-0 bottom-0 w-32 pointer-events-none z-10 hidden sm:block">
@@ -631,8 +631,7 @@ const handleEnter = async () => {
               <FloralCorner className="w-24 h-36 opacity-80"/>
             </div>
 
-            <div className="relative z-20 px-7 py-10 sm:pr-36"
-              style={{ paddingRight: undefined }}>
+            <div className="relative z-20 px-7 py-10">
 
               {/* Card label */}
               <div className="text-center mb-8">
@@ -645,7 +644,7 @@ const handleEnter = async () => {
               </div>
 
               {/* Family columns */}
-              <div className="flex gap-6 mb-8 text-center">
+              <div className="flex w-full gap-6 mb-8 text-center">
                 <div className="flex-1">
                   <p className="font-cinzel tracking-wider mb-2" style={{ color: "#c9a84c", fontSize: "13px", fontWeight: 700 }}>THE BRIDE FAMILY</p>
                   <p className="font-lora leading-relaxed" style={{ color: "rgba(245,237,224,0.85)", fontSize: "14px", fontWeight: 700 }}>
@@ -661,7 +660,7 @@ const handleEnter = async () => {
                 </div>
               </div>
 
-              <div className="h-px mb-8" style={{ background: "rgba(201,168,76,0.2)" }}/>
+              <div className="w-full h-px mb-8" style={{ background: "rgba(201,168,76,0.2)" }}/>
 
               {/* Invitation text */}
               <div className="text-center space-y-2 mb-7">
