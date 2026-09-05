@@ -554,14 +554,14 @@ export default function App() {
               {/* Family columns */}
               <div className="flex gap-6 mb-8 text-center">
                 <div className="flex-1">
-                  <p className="font-cinzel tracking-wider mb-2" style={{ color: "#c9a84c", fontSize: "13px", fontWeight: 700 }}>THE BRIDE</p>
+                  <p className="font-cinzel tracking-wider mb-2" style={{ color: "#c9a84c", fontSize: "13px", fontWeight: 700 }}>THE BRIDE FAMILY</p>
                   <p className="font-lora leading-relaxed" style={{ color: "rgba(245,237,224,0.85)", fontSize: "14px", fontWeight: 700 }}>
                     D/o Late Mr. A. N. SAKTHIVEL<br/>&amp; MRS. S. HEMALATHA
                   </p>
                 </div>
                 <div className="w-px self-stretch" style={{ background: "rgba(201,168,76,0.3)" }}/>
                 <div className="flex-1">
-                  <p className="font-cinzel tracking-wider mb-2" style={{ color: "#c9a84c", fontSize: "13px", fontWeight: 700 }}>THE GROOM</p>
+                  <p className="font-cinzel tracking-wider mb-2" style={{ color: "#c9a84c", fontSize: "13px", fontWeight: 700 }}>THE GROOM FAMILY</p>
                   <p className="font-lora leading-relaxed" style={{ color: "rgba(245,237,224,0.85)", fontSize: "14px", fontWeight: 700 }}>
                     S/o MR. K. S. GANESHAN<br/>&amp; MRS. G. SUDHA
                   </p>
