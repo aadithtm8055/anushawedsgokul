@@ -810,10 +810,23 @@ const handleEnter = async () => {
       </section>
 
       {/* ══ 4 ── RECEPTION INFO ══════════════════════════════════════════════ */}
-      <section style={{ paddingLeft: 30, paddingRight: 30, paddingTop: 0, paddingBottom: 56 }}>
+      <section
+  className="w-full flex justify-center"
+  style={{
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop: 0,
+    paddingBottom: 56,
+  }}
+>
         <Reveal className="w-full">
-          <div className="card-burgundy rounded-2xl relative overflow-hidden"
-            style={{ boxShadow: "0 20px 64px rgba(90,24,40,0.38), 0 4px 16px rgba(0,0,0,0.2)" }}>
+          <div
+  className="card-burgundy rounded-2xl relative overflow-hidden w-full max-w-3xl mx-auto"
+  style={{
+    boxShadow:
+      "0 20px 64px rgba(90,24,40,0.38), 0 4px 16px rgba(0,0,0,0.2)",
+  }}
+>
 
             {/* Floral LEFT */}
             <div className="absolute left-0 top-0 bottom-0 w-32 pointer-events-none z-10 hidden sm:block">
@@ -824,7 +837,7 @@ const handleEnter = async () => {
               <FloralCorner className="w-24 h-36 opacity-80" flip/>
             </div>
 
-            <div className="relative z-20 px-7 py-10 sm:pl-36">
+            <div className="relative z-20 px-7 py-10">
               {/* Heading */}
               <div className="text-center mb-7">
                 <div className="flex items-center justify-center gap-3 mb-1">
