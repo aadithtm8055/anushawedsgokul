@@ -967,8 +967,13 @@ const handleEnter = async () => {
      {/* ══ 6 ── RECEPTION DAY SCHEDULE ═════════════════════════════════════ */}
       <section className="py-14" style={{ paddingLeft: 30, paddingRight: 30 }}>
         <Reveal className="w-full">
-          <div className="card-burgundy rounded-2xl relative overflow-hidden"
-            style={{ boxShadow: "0 20px 64px rgba(90,24,40,0.35), 0 4px 16px rgba(0,0,0,0.18)" }}>
+          <div
+  className="card-burgundy rounded-2xl relative overflow-hidden w-full"
+  style={{
+    boxShadow:
+      "0 20px 64px rgba(90,24,40,0.35), 0 4px 16px rgba(0,0,0,0.18)"
+  }}
+>
 
             {/* Floral right */}
             <div className="absolute right-0 top-0 bottom-0 w-32 pointer-events-none z-10 hidden sm:block">
