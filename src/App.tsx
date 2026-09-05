@@ -990,7 +990,8 @@ const handleEnter = async () => {
               </div>
 
               {/* Timeline */}
-              <div className="flex items-center justify-center gap-6 w-full"> 
+              {/* Timeline */}
+<div className="flex flex-col items-center justify-center w-full">
                 {/* Event 1 */}
                 <div className="flex items-center justify-center gap-6 w-full">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
