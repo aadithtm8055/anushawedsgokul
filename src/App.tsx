@@ -978,7 +978,7 @@ const handleEnter = async () => {
               <FloralCorner className="w-24 h-32 opacity-75"/>
             </div>
 
-            <div className="relative z-20 px-10 py-12 sm:pr-40">
+            <div className="relative z-20 px-10 py-12">
               {/* Heading */}
               <div className="text-center mb-10">
                 <div className="flex items-center justify-center gap-3 mb-1">
@@ -990,7 +990,7 @@ const handleEnter = async () => {
               </div>
 
               {/* Timeline */}
-              <div className="flex flex-col items-center justify-center w-full">
+              <div className="flex items-center justify-center gap-6 w-full"> 
                 {/* Event 1 */}
                 <div className="flex items-center justify-center gap-6 w-full">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
