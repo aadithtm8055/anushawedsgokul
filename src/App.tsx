@@ -964,11 +964,11 @@ const handleEnter = async () => {
         </div>
       </section>
 
-      {/* Timeline */}
+    {/* Timeline */}
 <div className="flex flex-col items-center w-full">
 
   {/* Event 1 */}
-  <div className="flex items-center gap-6">
+  <div className="flex items-center justify-center gap-6">
     <div
       className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
       style={{
@@ -995,6 +995,7 @@ const handleEnter = async () => {
       >
         9:15 AM
       </p>
+
       <p
         className="font-lora"
         style={{ color: "#f5ede0", fontSize: "1.6rem" }}
@@ -1005,12 +1006,15 @@ const handleEnter = async () => {
   </div>
 
   {/* Connector */}
-  <div className="h-10 w-px my-3"
-    style={{ background: "rgba(201,168,76,0.22)" }}
-  />
+  <div className="my-3">
+    <div
+      className="w-px h-10"
+      style={{ background: "rgba(201,168,76,0.22)" }}
+    />
+  </div>
 
   {/* Event 2 */}
-  <div className="flex items-center gap-6">
+  <div className="flex items-center justify-center gap-6">
     <div
       className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center"
       style={{
@@ -1035,6 +1039,7 @@ const handleEnter = async () => {
       >
         6:00 PM
       </p>
+
       <p
         className="font-lora"
         style={{ color: "#f5ede0", fontSize: "1.6rem" }}
